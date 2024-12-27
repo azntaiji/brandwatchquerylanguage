@@ -1,0 +1,29 @@
+{
+  "name": "brandwatch",
+  "displayName": "Brandwatch for VS Code",
+  "description": "Brandwatch query language support for VS Code",
+  "version": "0.0.1",
+  "publisher": "azntaiji",
+  "author": {
+    "name": "Zach Taiji"
+  },
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "brandwatchQueryLanguage",
+      "aliases": ["Brandwatch Query", "brandwatch"],
+      "extensions": [".brandwatch",".bw"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "brandwatchQueryLanguage",
+      "scopeName": "text.brandwatchQueryLanguage",
+      "path": "./syntaxes/brandwatchQueryLanguage.tmLanguage.json"
+    }]
+  }
+}

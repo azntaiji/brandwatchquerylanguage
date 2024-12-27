@@ -1,0 +1,45 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Brandwatch Query",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"name": "comment.block.brandwatchQueryLanguage",
+			"begin": "<<<",
+			"end": ">>>"
+		},
+		{
+			"name": "keyword.operator.brandwatchQueryLanguage",
+			"match": "\\b(AND|OR|NOT|NEAR\\/\\d+)\\b"
+		},
+		{
+			"name": "entity.name.class.brandwatchQueryLanguage",
+			"match": "\\w+:|\\*|#[a-zA-Z0-9_]+"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.brandwatchQueryLanguage",
+				"match": "\\b(if|while|for|return)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.brandwatchQueryLanguage",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.brandwatchQueryLanguage",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "text.brandwatchQueryLanguage"
+}
