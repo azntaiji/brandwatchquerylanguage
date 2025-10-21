@@ -2,7 +2,10 @@
   "name": "brandwatch",
   "displayName": "Brandwatch for VS Code",
   "description": "Brandwatch query language support for VS Code",
-  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/azntaiji/brandwatchquerylanguage"},
+  "version": "0.0.2",
   "publisher": "azntaiji",
   "author": {
     "name": "Zach Taiji"
